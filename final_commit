@@ -1,0 +1,11 @@
+total_char_sum = 0
+
+with open("netflix.tsv", "r", encoding="utf-8") as file:
+    next(file)
+    for line in file:
+        columns = line.split('\t')
+        if len(columns) >= 3:
+            primary_title = columns[2]
+            total_char_sum += len(primary_title)
+
+print(total_char_sum)
