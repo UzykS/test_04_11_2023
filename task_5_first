@@ -1,0 +1,14 @@
+fruit_sales = [
+    {"fruit": "apple", "quantity": 30, "price_per_unit": 1.2},
+    {"fruit": "orange", "quantity": 45, "price_per_unit": 0.8},
+    {"fruit": "banana", "quantity": 25, "price_per_unit": 0.6},
+    {"fruit": "grape", "quantity": 40, "price_per_unit": 2.5},
+]
+
+total_revenue = 0
+for sale in fruit_sales:
+    quantity = sale["quantity"]
+    price_per_unit = sale["price_per_unit"]
+    revenue = quantity * price_per_unit
+    total_revenue += revenue
+print("Sum of sales is:", total_revenue)
