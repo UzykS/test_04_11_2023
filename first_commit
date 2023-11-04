@@ -1,0 +1,12 @@
+data_from_set = []
+total_char_sum = 0
+with open("netflix.tsv", "r") as file:
+    #Spočítej celkový počet všech znaků ve sloupci PRIMARYTITLE
+    for line in file:
+        data_from_set.append(line)
+data_from_set = data_from_set[1:]
+for movie in data_from_set:
+    primary_title = movie[2]
+    for char in primary_title:
+        total_char_sum += (len(primary_title))
+print(total_char_sum)
